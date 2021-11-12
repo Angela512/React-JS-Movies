@@ -1,0 +1,5 @@
+.btn{ /* btn이라는 클래스 /
+    module.css => className을 활용하여 전역이 아닌 컴포넌트에 한정하여 스타일 지정 가능*/
+    color: white;
+    background-color: tomato;
+}
