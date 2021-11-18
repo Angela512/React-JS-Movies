@@ -12,7 +12,6 @@ function Home() {
         const json = await response.json();
         setMovies(json.results);
         setLoading(false);
-//        console.log(json);
     }; 
 
     useEffect(() => {

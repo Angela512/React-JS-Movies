@@ -1,8 +1,6 @@
 import styles from "./Detail.module.css";
 import { useParams } from "react-router-dom";
 import { useEffect, useState, Component } from "react";
-import Helmet from "react-helmet";
-//import Iframe from "../components/iframe";
 
 function Detail() {
     const {id} = useParams(); 
@@ -13,7 +11,6 @@ function Detail() {
             );
         const json = await response.json();
         setMovies(json);
-    //    console.log(json);
     };
 
     const [videos, setVideos] = useState([]);
@@ -50,13 +47,7 @@ function Detail() {
             <p>{movies.overview}</p>
             </div>
             
-        </div>
-        
-        
+        </div>  
     );
-
 }
-
-
-
 export default Detail;
