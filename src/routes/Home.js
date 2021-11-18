@@ -7,18 +7,19 @@ function Home() {
     const [movies, setMovies] = useState([]);
     const getMovies = async() => {
         const response = await fetch(
-        `https://yts.mx/api/v2/list_movies.json?minimum_rating=9&sort_by=year`
+        `https://api.themoviedb.org/3/movie/now_playing?api_key=4c7605a6f5db442eb69c6d3c10be6d36&language=en-US&page=1`
         );
         const json = await response.json();
-        setMovies(json.data.movies);
+        setMovies(json.results);
         setLoading(false);
+//        console.log(json);
     }; 
-  
+
     useEffect(() => {
         getMovies();
     }, []);
 
-    console.log(movies);
+ //   console.log(movies);
 
     return (
         <div className={styles.container}>
@@ -32,11 +33,11 @@ function Home() {
                 <Movie 
                     key={movie.id}
                     id={movie.id}
-                    coverImg={movie.medium_cover_image} 
+                    coverImg={movie.poster_path}
                     title={movie.title}
-                    summary={movie.summary}
-                    genres={movie.genres}
-                    year={movie.year}
+                    summary={movie.overview}
+                    year={movie.release_date}
+                    rate={movie.vote_average}
                 />
                 ))} 
             </div>
