@@ -1,38 +1,23 @@
 import styles from "./Detail.module.css";
 import { useParams } from "react-router-dom";
-import { useEffect, useState, Component } from "react";
+import { useEffect, useState } from "react";
+const API_KEY = "4c7605a6f5db442eb69c6d3c10be6d36";
 
 function Detail() {
     const {id} = useParams(); 
     const [movies, setMovies] = useState([]);
     const getMovie = async() => {
         const response = await fetch(
-            `https://api.themoviedb.org/3/movie/${id}?api_key=4c7605a6f5db442eb69c6d3c10be6d36&language=en-US&page=1`
+            `https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}&language=en-US&page=1`
             );
         const json = await response.json();
         setMovies(json);
     };
 
-    const [videos, setVideos] = useState([]);
-    const getVideo = async() => {
-        const response = await fetch(
-            `https://api.themoviedb.org/3/movie/${id}/videos?api_key=4c7605a6f5db442eb69c6d3c10be6d36&language=en-US&page=1`
-        );
-        const json = await response.json();
-        setVideos(json.results[0]);
- //       console.log(json);
-    };
-    
-    useEffect(() => {
-        getVideo();
-    }, []);
-
     useEffect(() => {
         getMovie();
     }, []);
     
-    console.log(videos);
-    console.log(movies);
     return (
         
         <div className={styles.movie}>

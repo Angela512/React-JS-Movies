@@ -2,7 +2,7 @@ import PropTypes from "prop-types";
 import { Link } from "react-router-dom";
 import styles from "./Movie.module.css";
 
-function Movie({id, coverImg, title, summary, year, rate}) { 
+function Movie({id, coverImg, title, year, rate}) { 
     return (
     <div className={styles.movie}>
     <Link to={ `/movie/${id}` }>
@@ -22,7 +22,6 @@ Movie.propTypes = {
     id: PropTypes.number.isRequired,
     coverImg: PropTypes.string.isRequired,
     title: PropTypes.string.isRequired,
-    summary: PropTypes.string.isRequired,
     year: PropTypes.string.isRequired,
     rate: PropTypes.number.isRequired,
 }
