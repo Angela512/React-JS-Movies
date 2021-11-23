@@ -10,7 +10,7 @@ function Movie({id, coverImg, title, summary, year, rate}) {
     </Link>
     <div>
     <h4 className={styles.movie__title}>
-      {title.length > 35 ? `${title.slice(0,35)}...` : title}</h4>
+      {title.length > 27 ? `${title.slice(0,27)}...` : title}</h4>
       <h3 className={styles.movie__year}>({year.substring(0,4)})</h3>
       <h5 className={styles.movie__rate}>⭐{rate}/10</h5>
     </div>

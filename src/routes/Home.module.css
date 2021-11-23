@@ -17,10 +17,10 @@
   
   .movies {
     display: grid;
-    grid-template-columns: repeat(4, minmax(200px, 1fr));
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-gap: 50px;
     padding: 50px;
-    width: 80%;
+    width: 65%;
     padding-top: 70px;
   }
   
