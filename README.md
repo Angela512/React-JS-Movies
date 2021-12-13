@@ -1,8 +1,8 @@
-## 영화 웹서비스
+# 영화 웹서비스
 
 현재 상영중인 영화 정보를 제공하는 웹서비스 입니다.
 
-# 공부한 이론
+## 공부한 이론
 
 * JSX
 
@@ -16,7 +16,7 @@
 
 * Routing
 
-# 사용한 패키지
+## 사용한 패키지
 
 * React
 
@@ -26,7 +26,7 @@
 
 * Github Pages
 
-# 사용한 기술
+## 사용한 기술
 
 * React
 
@@ -34,7 +34,7 @@
 
 * Node.js
 
-# 사용 이미지
+## 사용 이미지
 
 <img src="https://user-images.githubusercontent.com/57383916/145743648-46bf35ba-432a-4bdb-b00a-608270ee9f30.jpg" width="400" height="200" />
 
